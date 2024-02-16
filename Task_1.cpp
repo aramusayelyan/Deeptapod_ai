@@ -2,6 +2,9 @@
 #include <fstream>
 #include <string>
 
+// The half of the task is nicely done. The implementation of checkUpper, end_letter, etc.. by hand is appreciated. 
+// Choose one exact coding style for you (CamelCase - ex: checkUpper, snake_case - ex: check_upper, etc.), don't mix them.
+
 bool checkUpper(std::string word)
 {
     if (word[0] >= 65 && word[0] <= 90)
@@ -16,7 +19,8 @@ bool checkUpper(std::string word)
     // avoid excessive "if-else", just type "return word[0] >= 65 && word[0] <= 90"
 }
 
-bool end_letter(std::string word)
+bool end_letter(std::string word) 
+// Pass std::string by reference, so that the whole object isn't copied. check out "pass by reference vs pass by copy".
 {
     int size = word.size();
     if ((word[size - 1] >= 97 && word[size - 1] <= 122) || (word[size - 1] >= 65 && word[size - 1] <= 90))

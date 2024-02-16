@@ -12,6 +12,8 @@ bool checkUpper(std::string word)
     {
         return false;
     }
+
+    // avoid excessive "if-else", just type "return word[0] >= 65 && word[0] <= 90"
 }
 
 bool end_letter(std::string word)
@@ -25,6 +27,8 @@ bool end_letter(std::string word)
     {
         return false;
     }
+
+    // the same issue here
 }
 
 std::string size_1(std::string word)
@@ -36,6 +40,7 @@ int main()
 {
     int index = 0;
     std::string db[2000]; // Հայկը ասելա նավսյակի շատ վերցրեք եթե չգիտեք հաստատ չափը 😂
+    // :D 
     std::ifstream file("input.txt");
     std::ofstream ofile("output.txt");
     std::ifstream dbfile("db.txt");
